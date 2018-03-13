@@ -1,0 +1,51 @@
+@import "base_folder/base";
+$width: 300px;
+
+body{
+    background-color: $primaryColour;
+}
+
+header{
+    background-color: darken($primaryColour, 10%);
+    nav{
+        ul{
+            
+            list-style: none;
+            text-align: center;
+            li{
+                display: inline-block;
+            }
+        }
+    }
+}
+
+h1{
+    color: complement($primaryColour);
+}
+
+@mixin boxSize{
+    height: 200px;
+    width: $width;
+}
+
+#box1{
+    @include boxSize;
+    background-color: #1C28FF;
+    width: $width;
+}
+
+#box2{
+    @include boxSize;
+    background-color: #000AB2;
+    width: $width / 2;
+}
+
+footer{
+    background-color: lighten($primaryColour, 10%);
+    nav {
+        ul{
+            list-style: none;
+            text-align: right;
+        }
+    }
+}
